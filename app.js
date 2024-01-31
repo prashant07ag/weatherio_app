@@ -79,7 +79,16 @@ const errorContent = document.querySelector("[data-error-content]");
 
 const toggleUnitBtn = document.getElementById('toggleUnitBtn');
 
+var isCelsius = true;
+toggleUnitBtn.addEventListener('click', function () {
+    isCelsius = !isCelsius;
+    console.log('Button clicked:', isCelsius);
 
+});
+
+const convertTemperature = (temperature) => {
+    return isCelsius ? parseInt(temperature) : module.celsiusToFahrenheit(parseInt(temperature));
+};
 
 export const updateWeather = function(lat, lon ){
     loading.style.display = "grid";
@@ -115,16 +124,6 @@ export const updateWeather = function(lat, lon ){
 
         const card = document.createElement("div");
         card.classList.add("card","card-lg","current-weather-card");
-        var isCelsius = true;
-        toggleUnitBtn.addEventListener('click', function () {
-            isCelsius = !isCelsius;
-            console.log('Button clicked:', isCelsius);
-        
-        });
-
-        const convertTemperature = (temperature) => {
-            return isCelsius ? parseInt(temperature) : module.celsiusToFahrenheit(parseInt(temperature));
-        };
 
         card.innerHTML=`
         <h2 class="title-2 card-title">Now</h2>
