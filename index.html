@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./app.js" type="module"></script>
+    <script src="./route.js" type="module"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./images/logo.png" width="200" height="34" alt="logo">
+            </a>
+            <div class="searchbar" data-search-view>
+                <div class="search_wrapper">
+                    <input type="search" name="search" placeholder="search city..." autocomplete="off"
+                        class="search-field " data-search-field>
+                    <span class="m-icon leading-icon">Search</span>
+
+                    <button class="icon-btn leading-icon has-state" aria-label="close search" data-search-toggler>
+                        <span class="m-icon">arrow_back</span>
+                    </button>
+                </div>
+
+                <div class="search-result" data-search-results>
+
+                </div>
+
+            </div>
+
+            <div class="header-actions">
+                <button class="icon-btn has-state" aria-label="open-search" data-search-toggler>
+                    <span class="m-icon icon ">search</span>
+                </button>
+                <a href="#/current-location" class="btn-primary has-state" data-current-location-btn disabled>
+                    <span class="m-icon">my_location</span>
+                    <span class="span">Current Location</span>
+                </a>
+            </div>
+        </div>
+        <!-- Update your button to include inline styles -->
+        <button id="toggleUnitBtn"
+            style="margin: auto; padding: 10px; background-color:#1D1C1F;margin-bottom:5px; border-radius: 14px;">&deg;c
+            / &deg;f</button>
+
+
+    </header>
+
+    <main>
+        <article class="container" data-container>
+            <div class="content-left">
+                <!-- current weather -->
+
+                <section class="section current-weather" aria-labelledby="current weather" data-current-weather>
+
+                </section>
+
+                <section class="section forecast" aria-labelledby="forecast-label" data-5-day-forecast>
+                </section>
+            </div>
+
+            <div class="content-right">
+                <section class="section highlights" aria-labelledby="highlights-label" data-highlights>
+
+                </section>
+
+                <hr>
+
+                <footer class="footer">
+                    <p class="body-3">
+                        made by Prashant Agrawal
+                    </p>
+                    <p class="body-3">
+                        Powered By <a href="https://openweathermap.org/api" title="free OpenWeather Api" target="_blank"
+                            rel="noopener">
+                            <img src="./images/openweather.png" width="150" height="30" loading="lazy"
+                                alt="openweather">
+                        </a>
+                    </p>
+                </footer>
+
+            </div>
+
+            <div class="loading" data-loading></div>
+        </article>
+    </main>
+
+    <section class="error-content" data-error-content>
+        <h2 class="heading">404</h2>
+
+        <p class="body1">Page not found</p>
+
+        <a href="#" class="btn-primary">
+            <span class="span">Go Home</span>
+        </a>
+    </section>
+
+</body>
+
+</html>
