@@ -20,7 +20,7 @@ Weatherio App is a simple and intuitive weather application built with HTML, CSS
 
 1. Clone the repository to your local machine.
     ```bash
-    git clone https://github.com/your-username/weatherio-app.git
+    git clone https://github.com/your-username/weatherio_app.git
     ```
 
 2. Open `index.html` in your preferred web browser.
